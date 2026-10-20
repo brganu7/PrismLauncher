@@ -5,9 +5,9 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  merge_group:
-    types: [checks_requested]
-  pull_request:
+  push:
+    branches:
+      - my-launcher
   workflow_call:
     inputs:
       build-type:
